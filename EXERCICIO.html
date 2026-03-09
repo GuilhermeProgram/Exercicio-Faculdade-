@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<title>Uma pergunta importante ❤️</title>
+
+<style>
+body{
+    background-color:#ffd6e7;
+    font-family: Arial, sans-serif;
+    text-align:center;
+    margin-top:50px;
+}
+
+h1{
+    color:#ff2e63;
+}
+
+img{
+    width:250px;
+    margin-bottom:20px;
+}
+
+button{
+    padding:15px 25px;
+    font-size:18px;
+    border:none;
+    border-radius:10px;
+    cursor:pointer;
+    margin:10px;
+}
+
+#sim{
+    background-color:#ff0bf3;
+    color:white;
+}
+
+#nao{
+    background-color:#cdfa03;
+    color:white;
+    position:absolute;
+}
+
+#resultado{
+    font-size:30px;
+    margin-top:30px;
+    color:#ff2e63;
+}
+</style>
+</head>
+
+<body>
+
+<img src="https://media.giphy.com/media/MDJ9IbxxvDUQM/giphy.gif">
+
+<h1>VOCÊ AMA EUZINHO ? ❤️</h1>
+
+<button id="sim">Sim</button>
+<button id="nao">Não</button>
+
+<div id="resultado"></div>
+
+<script>
+const botaoNao = document.getElementById("nao");
+
+botaoNao.addEventListener("mouseover", () => {
+    const largura = window.innerWidth - botaoNao.offsetWidth;
+    const altura = window.innerHeight - botaoNao.offsetHeight;
+
+    const novaPosX = Math.random() * largura;
+    const novaPosY = Math.random() * altura;
+
+    botaoNao.style.left = novaPosX + "px";
+    botaoNao.style.top = novaPosY + "px";
+});
+
+document.getElementById("sim").addEventListener("click", () => {
+    document.getElementById("resultado").innerHTML =
+    "EU TBM TE AMO, FELIZ DIA DA MULHER MEU AMOR! ❤️🥰";
+});
+</script>
+
+</body>
+</html>
